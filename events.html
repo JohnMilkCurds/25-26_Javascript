@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+<!--
+Each event is attached to an HTML object - each one uses the same function
+-->
+<button onclick="exampleFunction()">onclick</button> <br/>
+<button onmouseover="exampleFunction()">onmouseover</button><br/>
+<button onmouseout="exampleFunction()">onmouseout</button><br/>
+<input type="text" onkeydown="exampleFunction()"><br />
+<input type="text" onchange="exampleFunction()" placeholder="Default data"><br />
+
+<script>
+
+    function exampleFunction(){
+        alert("EVENT ACTIVATED");
+    }
+</script>
+
+</body>
+</html>
