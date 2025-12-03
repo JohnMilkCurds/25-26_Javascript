@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conditional Example</title>
+</head>
+<body>
+
+<form action="#" method="post">
+    <label for="passwd">New Password</label>
+    <input type="password" name="passwd" id="passwd" onkeydown="checkLength()">
+    <div id="length"></div>
+    <br />
+    <label for="passwd2">New Password</label>
+    <input type="password" name="passwd2" id="passwd2" onchange="checkMatch">
+    <div id="eval"></div>
+</form>
+
+<script>
+    // check the length of the first password field
+    function checkLength(){
+        len = document.getElementById("passwd").value.length;
+        passwd = document.getElementById("passwd").innerHTML
+        // minimum length 8
+        // ((len+1) <8) also works
+        if(len  < 7){
+            document.getElementById("length").innerHTML = "<font color='red'>Password must be at least 8 characters</font>";
+        } else{
+            document.getElementById("length").innerHTML = "<font color='green'>Password is strong</font>";
+        }
+    }
+    function checkMatch(){
+        passwd = document.getElementById("passwd").innerHTML;
+        passwd2 = document.getElementById("passwd2").innerHTML;
+
+        if(passwd === passwd2){
+            document.getElementById("eval").innerHTML = "<font color ='green'>Passwords match</font>";
+        }else{
+            document.getElementById("eval").innerHTML = "<font color ='red'>Passwords dont match</font>";
+        }
+
+    }
+    // Verify password and confirm passwords are same
+</script>
+</body>
+</html>
