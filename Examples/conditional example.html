@@ -30,8 +30,8 @@
         }
     }
     function checkMatch(){
-        passwd = document.getElementById("passwd").innerHTML;
-        passwd2 = document.getElementById("passwd2").innerHTML;
+        passwd = document.getElementById("passwd").value;
+        passwd2 = document.getElementById("passwd2").value;
 
         if(passwd === passwd2){
             document.getElementById("eval").innerHTML = "<font color ='green'>Passwords match</font>";
