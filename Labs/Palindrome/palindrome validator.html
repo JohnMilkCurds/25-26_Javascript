@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome Validator</title>
+</head>
+<body>
+<!--
+1. Make button and text box that determines if text is a palindrome. Make a color message that states if it is a palindrome.
+
+-->
+<!-- Text Box-->
+<label for="text">Insert word</label>
+<input type="text" name="passwd" id="text">
+<div id="original"></div>
+<br />
+<!-- Button-->
+<button id="confirm" onclick="testWord()">Test Word</button>
+
+
+
+
+<script>
+
+    <!--validator function -->
+    function testWord(){
+        word = document.getElementById("text").value;
+        backWord= backwards(word)
+
+        if(word===backWord){
+            document.getElementById("original").innerHTML = "<font color='green'>Word is palindrome</font>";
+        } else{
+            document.getElementById("original").innerHTML = "<font color='red'>Word is not palindrome</font>";
+        }
+    }
+
+
+    function backwards(){
+        for(x=0; x< word.length; x++){
+
+        }
+    }
+</script>
+</body>
+</html>
