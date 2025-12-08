@@ -24,10 +24,13 @@
 
     <!--validator function -->
     function testWord(){
-        word = document.getElementById("text").value;
-        backWord= backwards(word)
+        let word = document.getElementById("text").value;
+        let back ="";
+        for(let x=0; x< word.length; x++){
+            back = back + word[word.length-(x+1)];
+        }
 
-        if(word===backWord){
+        if(word=== back){
             document.getElementById("original").innerHTML = "<font color='green'>Word is palindrome</font>";
         } else{
             document.getElementById("original").innerHTML = "<font color='red'>Word is not palindrome</font>";
@@ -35,11 +38,8 @@
     }
 
 
-    function backwards(){
-        for(x=0; x< word.length; x++){
 
-        }
-    }
+
 </script>
 </body>
 </html>
